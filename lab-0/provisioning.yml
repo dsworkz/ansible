@@ -1,0 +1,33 @@
+---
+  - hosts: localhost
+    connection: local
+    tasks:
+            #      - name: create a directory
+            #command: mkdir /usr/src/app /usr/src/app/templates/
+            #become_user: root
+        
+      - name: copy index.html
+        copy:
+          src: ./files/index.html
+          dest: ./app/templates/
+          #    mode: '0644'
+
+      - name: copy requirements
+        copy:
+          src: ./files/requirements.txt
+          dest: ./app/
+          #mode: '0644'
+
+      - name: copy source
+        copy:
+          src: ./files/app.py
+          dest: ./app/
+          #mode: '0644'
+
+      - name: install packages
+        command: pip install --no-cache-dir -r ./app/requirements.txt
+
+      - name: run application
+        command: python ./app/app.py
+        delegate_to: 127.0.0.1
+        run_once: true
