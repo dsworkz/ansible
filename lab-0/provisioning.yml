@@ -1,16 +1,11 @@
 ---
   - hosts: localhost
     connection: local
-    tasks:
-            #      - name: create a directory
-            #command: mkdir /usr/src/app /usr/src/app/templates/
-            #become_user: root
-        
+    tasks:        
       - name: copy index.html
         copy:
           src: ./files/index.html
           dest: ./app/templates/
-          #    mode: '0644'
 
       - name: copy requirements
         copy:
