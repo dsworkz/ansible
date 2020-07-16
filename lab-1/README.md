@@ -19,24 +19,9 @@ This role contains tasks to:
 - Install Java
 - Add tomcat user and group
 - Download tomcat and install - configure systemd
-- Configure firewall
 
 ## How to use this role
 
-- Clone the Project:
-
-```
-$ git clone https://github.com/jmutai/tomcat-ansible.git
-$ cd tomcat-ansible
-```
-
-- Update your inventory, e.g:
-
-```
-$ vim hosts
-[tomcat-nodes]
-192.168.10.10       # Remote user to act on
-```
 
 - Update variables in playbook file - Set Tomcat version, remote user and Tomcat UI access credentials
 
@@ -71,34 +56,36 @@ Once all values are updated, you can then run the playbook against your nodes.
 Playbook executed as root user - with ssh key:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml
+$ ansible-playbook site.yml
 ```
 
 Playbook executed as root user - with password:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml --ask-pass
+$ ansible-playbook site.yml --ask-pass
 ```
 
 Playbook executed as sudo user - with password:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml --ask-pass --ask-become-pass
+$ ansible-playbook site.yml --ask-pass --ask-become-pass
 ```
 
 Playbook executed as sudo user - with ssh key and sudo password:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml --ask-become-pass
+$ ansible-playbook site.yml --ask-become-pass
 ```
 
 Playbook executed as sudo user - with ssh key and passwordless sudo:
 
 ```
-$ ansible-playbook -i hosts tomcat-setup.yml --ask-become-pass
+$ ansible-playbook site.yml --ask-become-pass
 ```
 
 Execution should be successful without errors:
+
+Check tomcat website runing on <public_dns/ip>:8080
 
 ```
 ```
