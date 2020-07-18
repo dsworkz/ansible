@@ -9,10 +9,10 @@ intended to get users up and running quick uses a file called inventory which co
 related to remote infrastructure.
 
 Lab-2 consists of the inventory file `hosts` which has details of 
-``
+```
 remotehost ansible_host=<private ip/dns> ansible_connection=ssh ansible_user=<user of server example: ec2-user> 
 
-``
+```
 
 `remotehost` is hosts that we are giving our remote host (VM that we want to connect remotely using SSH) as alias name to pick
 
