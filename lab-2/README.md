@@ -1,4 +1,5 @@
-In previus lab we have seen the deployment of tomcat.
+#### Ansible connect remote host
+In previous lab we have seen the deployment of tomcat.
 
 This lab provides exercise on how to connect remote host/virtual server using inventory
 
