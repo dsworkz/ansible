@@ -3,9 +3,9 @@ In previous lab we have seen the deployment of tomcat.
 
 This lab provides exercise on how to connect remote host/virtual server using inventory
 
-Small introduction about inventory:
+#### Small introduction about inventory:
 
-Ansible to perform task of setting up and maintaining remote servers, with a minimalist design
+Ansible to perform task - setting up and maintaining remote servers, with a minimalist design
 intended to get users up and running quick uses a file called inventory which consist of details 
 related to remote infrastructure.
 
@@ -85,3 +85,8 @@ ansible-playbook -i hosts site.yml --private-key ./test.pem-vvvv
 After successful execution we can check public ip/dns of remote host at port 8080 in a browser for tomcat server response
 
 ```<public_ip>:8080```
+
+Useful resources: 
+Inventory: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+Dealing with your first inventory: https://docs.ansible.com/ansible/latest/network/getting_started/first_inventory.html
+
