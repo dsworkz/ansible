@@ -1,0 +1,1 @@
+remotehost ansible_host=<private ip/dns> ansible_connection=ssh ansible_user=<user of server example: ec2-user> 

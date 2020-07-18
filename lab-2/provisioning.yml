@@ -1,6 +1,5 @@
 ---
-  - hosts: localhost
-    connection: local
+  - hosts: remotehost
     become: yes               # If to escalate privilege
     become_method: sudo       # Set become method
     vars:
