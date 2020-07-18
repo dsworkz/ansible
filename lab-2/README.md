@@ -86,7 +86,7 @@ After successful execution we can check public ip/dns of remote host at port 808
 
 ```<public_ip>:8080```
 
-Useful resources: 
-Inventory: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
-Dealing with your first inventory: https://docs.ansible.com/ansible/latest/network/getting_started/first_inventory.html
+## Useful resources: 
+`Inventory: https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html`
+`Dealing with your first inventory: https://docs.ansible.com/ansible/latest/network/getting_started/first_inventory.html`
 
